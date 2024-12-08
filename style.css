@@ -53,3 +53,44 @@ body{
     cursor: pointer;
     transform: scale(1.1);
 }
+
+/* Media Query for Small Screens (Phones: 480px - 600px) */
+@media only screen and (max-width: 600px) {
+    .gallery {
+        width: 90%;
+        /* Make the gallery container smaller on mobile */
+    }
+
+    .gallery div {
+        grid-template-columns: repeat(2); /* 2 columns on mobile */
+    }
+
+    .gallery div img {
+        width: 100%; /* Ensure the images are responsive */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    #backbtn, #nextbtn {
+        width: 30px; /* Smaller navigation buttons on mobile */
+    }
+}
+
+/* Media Query for Extra Small Screens (Phones: less than 480px) */
+@media only screen and (max-width: 480px) {
+    .gallery {
+        width: 100%; /* Full width on small screens */
+    }
+
+    .gallery div {
+        grid-template-columns: 1fr; /* 1 column layout for very small screens */
+    }
+
+    .gallery div img {
+        width: 100%; /* Ensure full width on small screens */
+        height: auto; /* Keep aspect ratio intact */
+    }
+
+    #backbtn, #nextbtn {
+        width: 25px; /* Further reduce button size */
+    }
+}
